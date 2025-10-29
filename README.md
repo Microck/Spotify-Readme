@@ -1,5 +1,6 @@
 <div align="center">
-![danny-devito (1)](https://github.com/user-attachments/assets/bc7a0ee4-abdf-4bdd-b23f-626a4188c8eb)
+![danny-devito](https://github.com/user-attachments/assets/e7687751-6e90-4ed7-abe7-52d5483aedf3)
+
 </div>
 
 ## Keep Your Fork Up To Date
