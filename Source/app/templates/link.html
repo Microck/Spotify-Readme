@@ -2,10 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC" />
-    <title>Redirecting...</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Redirecting to Spotify...</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        color: #222;
+        background-color: #f8f8f8;
+      }
+
+      a {
+        color: #1db954;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
-    <p>Redirecting to Spotify... If it doesn’t happen automatically, <a href="https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC">click here</a>.</p>
+    <h1>Redirecting to your current Spotify track… 🎵</h1>
+    <p id="fallback">
+      If you aren't redirected automatically, <a href="#">click here</a>.
+    </p>
+
+    <script>
+      // get the embed link from template (e.g. "https://open.spotify.com/embed/track/...")
+      const embedLink = "{{ embed_link }}";
+
+      if (embedLink && embedLink.includes("/embed/")) {
+        // convert /embed/... to regular /...
+        const normalLink = embedLink.replace("/embed/", "/");
+
+        // update fallback link href
+        document.querySelector("#fallback a").href = normalLink;
+
+        // redirect instantly
+        window.location.href = normalLink;
+      } else if (embedLink) {
+        // already a normal link
+        document.querySelector("#fallback a").href = embedLink;
+        window.location.href = embedLink;
+      } else {
+        // no link provided
+        document.body.innerHTML =
+          "<h1>⚠️ No Spotify link provided</h1><p>Make sure {{ embed_link }} is replaced with a valid Spotify URL.</p>";
+      }
+    </script>
   </body>
 </html>
