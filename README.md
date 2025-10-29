@@ -1,8 +1,4 @@
 <div align="center">
-  <img src="Images/Spotify.svg" width="100" align="center">
-
-
-
 ![danny-devito (1)](https://github.com/user-attachments/assets/77b2cf14-3ef2-4d4b-af37-afc6797bcfec)
 </div>
 
