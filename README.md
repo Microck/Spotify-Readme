@@ -1,5 +1,7 @@
 <div align="center">
-![danny-devito](https://github.com/user-attachments/assets/e7687751-6e90-4ed7-abe7-52d5483aedf3)
+  
+![estoes](https://github.com/user-attachments/assets/f5781a5f-f2d8-4430-afed-5d9822e82097)
+
 
 </div>
 
